@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marblehead Ward Program</title>
+<meta name="description" content="This week's sacrament meeting program and ward announcements.">
+<meta name="theme-color" content="#F4F5F3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B2530'/%3E%3Cpath d='M18 20h28M18 32h28M18 44h18' stroke='%23F4F5F3' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#F4F5F3; --card:#FFFFFF; --line:#E2E5E3; --rule:#EEF0EE; --nav:#E6E9E7;
+  --ink:#1B2530; --text2:#3C4852; --muted:#5B6670;
+  --accent:#1B2530; --soft:#E6E9EC; --tab-on:#FFFFFF; --tab-on-ink:#1B2530; --tab-off:#4A5560;
+  --btn:#1B2530; --btn-ink:#FFFFFF; --featured:#1B2530; --featured-ink:#FFFFFF; --featured-label:#B9C4CF;
+  --serif:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans:'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+html[data-colors="Teal"]{--accent:#2F5D62;--soft:#E3EDEC;--btn:#2F5D62;--featured:#2F5D62;--featured-label:#CFE3E1}
+html[data-colors="Warm"],html[data-colors="Rose"]{--ground:#E9E6E1;--card:#F7F4EF;--line:#DDD8D1;--rule:#E6E1DA;--nav:#DCD8D2;--ink:#171717;--text2:#3A3632;--muted:#5E5953;--tab-on:#171717;--tab-on-ink:#FFFFFF;--tab-off:#3A3632;--btn:#171717;--featured:#171717}
+html[data-colors="Warm"]{--accent:#8A4F1F;--soft:#F1E4D5;--featured-label:#E2B88F}
+html[data-colors="Rose"]{--accent:#9C3F46;--soft:#F5E1DF;--featured-label:#F0B9B4}
+html[data-colors="Night"]{--ground:#131517;--card:#1D2023;--line:#2E3236;--rule:#272B2F;--nav:#24282C;--ink:#F1EEE9;--text2:#D3CFC9;--muted:#A9A49D;--accent:#E8C29C;--soft:#33291F;--tab-on:#F1EEE9;--tab-on-ink:#131517;--tab-off:#D3CFC9;--btn:#F1EEE9;--btn-ink:#131517;--featured:#2A241D;--featured-ink:#F1EEE9;--featured-label:#E2B88F}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:15px/1.45 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px calc(28px + env(safe-area-inset-bottom))}
+header{padding:calc(36px + env(safe-area-inset-top)) 4px 22px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.ward{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{margin:2px 0 0;font:600 44px/1 var(--serif);letter-spacing:-.01em}
+.date{font-size:15px;color:var(--text2);margin-top:4px}
+.pill{margin-top:8px;display:inline-flex;align-items:center;min-height:28px;padding:2px 12px;border-radius:999px;background:var(--soft);color:var(--accent);font-size:13px;font-weight:600}
+nav{padding:4px;border-radius:14px;background:var(--nav);display:grid;grid-template-columns:1fr 1fr;gap:4px;position:sticky;top:max(8px,env(safe-area-inset-top));z-index:2}
+nav button{min-height:44px;border:0;border-radius:11px;background:transparent;color:var(--tab-off);font:600 15px var(--sans);cursor:pointer}
+nav button[aria-selected="true"]{background:var(--tab-on);color:var(--tab-on-ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lbl{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.leaders{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:var(--card);border:1px solid var(--line)}
+.leader{border-radius:14px;padding:12px 14px}
+.leader div:last-child{font-weight:500;margin-top:2px}
+.order{margin-top:14px;border-radius:18px;padding:8px 20px 14px}
+.row{display:flex;align-items:flex-start;gap:14px;padding:13px 0;border-top:1px solid var(--rule)}
+.row.first{border-top:0}
+.num{width:52px;flex:none;padding-top:1px;font:600 30px/1 var(--serif);color:var(--accent)}
+.row .body{flex:1;min-width:0}
+.main{font-size:17px;font-weight:500;margin-top:2px}
+.sub{font-size:14px;color:var(--muted);margin-top:1px}
+.hymn{display:flex;align-items:center;gap:8px;min-height:44px;margin:-6px 0 -8px;color:var(--ink);text-decoration:none}
+.hymn .t{flex:1;font-size:17px;font-weight:500}
+.hymn .t small{display:block;font-size:13px;font-weight:500;color:var(--accent)}
+.go{width:36px;height:36px;flex:none;border-radius:50%;background:var(--soft);color:var(--accent);display:flex;align-items:center;justify-content:center}
+.divider{display:flex;align-items:center;gap:12px;padding:18px 0 14px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.divider span{font:italic 500 19px var(--serif);color:var(--accent);text-align:center;max-width:75%}
+.note{margin-top:20px;border-radius:18px;padding:22px 20px;text-align:center;color:var(--text2)}
+footer{padding:24px 8px 8px;text-align:center;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+footer q{font:italic 18px var(--serif);color:var(--text2);quotes:"“" "”"}
+.featured{margin-top:16px;background:var(--featured);color:var(--featured-ink);border-radius:18px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px}
+.featured .lbl{color:var(--featured-label);letter-spacing:.14em}
+.featured h2{margin:0;font:600 30px/1.05 var(--serif)}
+.featured p{margin:0;font-size:14px}
+.group{margin:26px 4px 10px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.list{display:flex;flex-direction:column;gap:10px}
+.ann{border-radius:16px;padding:16px;display:flex;gap:14px;align-items:flex-start}
+.tile{width:54px;flex:none;border-radius:12px;background:var(--soft);color:var(--accent);text-align:center;padding:7px 0 8px;display:flex;flex-direction:column}
+.tile span:first-child,.tile span:last-child{font-size:11px;font-weight:600;letter-spacing:.1em}
+.tile b{font:600 28px/1 var(--serif)}
+.ann h3{margin:0;font:600 22px/1.1 var(--serif)}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:13px;color:var(--text2);margin-top:4px}
+.meta span{display:inline-flex;align-items:center;gap:5px}
+.ann p{margin:6px 0 0;font-size:14px;color:var(--text2);white-space:pre-line}
+.cta{margin-top:10px;min-height:40px;padding:0 14px;border-radius:10px;background:var(--btn);color:var(--btn-ink);font-weight:600;font-size:14px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.featured .cta{background:var(--featured-ink);color:var(--featured)}
+.empty{margin-top:20px;border-radius:16px;padding:22px;text-align:center;color:var(--text2)}
+.skel{height:14px;border-radius:7px;background:var(--rule);margin:14px 0}
+.status{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
+[hidden]{display:none!important}
+@media (min-width:600px){h1{font-size:52px}.wrap{padding-left:24px;padding-right:24px}}
+@media (prefers-reduced-motion:no-preference){main{animation:fade .25s ease}@keyframes fade{from{opacity:0}to{opacity:1}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="ward" id="ward">Marblehead Ward</div>
+    <h1 id="title">Sacrament Meeting</h1>
+    <div class="date" id="date">&nbsp;</div>
+    <div class="pill" id="pill" hidden></div>
+  </header>
+  <nav role="tablist" aria-label="Sections">
+    <button role="tab" id="tab-program" aria-controls="program" aria-selected="true">Program</button>
+    <button role="tab" id="tab-news" aria-controls="news" aria-selected="false">Announcements</button>
+  </nav>
+  <main id="program" role="tabpanel" aria-labelledby="tab-program">
+    <div class="card order"><div class="skel"></div><div class="skel" style="width:70%"></div><div class="skel"></div><div class="skel" style="width:55%"></div></div>
+  </main>
+  <main id="news" role="tabpanel" aria-labelledby="tab-news" hidden></main>
+  <div class="status" id="status" aria-live="polite"></div>
+</div>
+<script>
+// Where the program comes from: the ward's read-only Apps Script feed.
+const FEED_URL = 'https://script.google.com/macros/s/AKfycbwkBwBv69cefudDeE-ZUiEjM9Quz-h41MDbHe5N8NzlpJ_dzh1pzuqQVDcbVlFHOQ/exec';
+const CACHE_KEY = 'program.v1';
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = u => /^https:\/\//.test(String(u || '')) ? String(u) : '';
+const ICON = {
+  out: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>',
+  arrow: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  clock: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  pin: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>'
+};
+let DATA = null, TAB = location.hash === '#announcements' ? 'news' : 'program';
+
+function store(get, val){ try { return get ? JSON.parse(localStorage.getItem(CACHE_KEY) || 'null') : localStorage.setItem(CACHE_KEY, JSON.stringify(val)); } catch(e){ return null; } }
+
+function setColors(name){
+  document.documentElement.dataset.colors = name || 'Ink';
+  const m = document.querySelector('meta[name="theme-color"]');
+  if (m) m.content = getComputedStyle(document.documentElement).getPropertyValue('--ground').trim() || '#F4F5F3';
+}
+
+function renderProgram(p){
+  if (!p) return '<div class="card empty">The program for this Sunday hasn\'t been posted yet.</div>';
+  const leaders = [['Presiding', p.presiding], ['Conducting', p.conducting]].filter(x => x[1]);
+  let out = leaders.length ? `<section class="leaders" aria-label="Leaders" style="grid-template-columns:repeat(${leaders.length},1fr)">${leaders.map(([l, n]) => `<div class="card leader"><div class="lbl">${l}</div><div>${esc(n)}</div></div>`).join('')}</section>` : '';
+  if (!p.items || !p.items.length) return `<div class="card note">${esc(p.note || 'No program for this Sunday.')}</div>`;
+  let first = true;
+  const rows = p.items.map(it => {
+    if (it.type === 'divider') { first = true; return `<div class="divider"><span>${esc(it.title)}</span></div>`; }
+    const cls = first ? 'row first' : 'row'; first = false;
+    const url = safeUrl(it.url);
+    const main = it.type === 'hymn' && url
+      ? `<a class="hymn" href="${esc(url)}" target="_blank" rel="noopener"><span class="t">${esc(it.main)}<small>Words &amp; music</small></span><span class="go">${ICON.out}</span></a>`
+      : `<div class="main">${esc(it.main)}</div>`;
+    return `<div class="${cls}"><div class="num">${it.num ? esc(it.num) : ''}</div><div class="body"><div class="lbl">${esc(it.label)}</div>${main}${it.sub ? `<div class="sub">${esc(it.sub)}</div>` : ''}</div></div>`;
+  }).join('');
+  return out + `<div class="card order">${rows}</div>
+    <footer><q>Do this in remembrance of me.</q><div>Luke 22:19</div></footer>`;
+}
+
+function renderNews(a){
+  const feat = (a && a.featured) || [], groups = (a && a.groups) || [];
+  if (!feat.length && !groups.length) return '<div class="card empty">No announcements this week.</div>';
+  const btn = x => safeUrl(x.link) ? `<a class="cta" href="${esc(safeUrl(x.link))}" target="_blank" rel="noopener">${esc(x.button || 'Learn more')}${ICON.arrow}</a>` : '';
+  const when = x => [x.time && `<span>${ICON.clock}${esc(x.time)}</span>`, x.place && `<span>${ICON.pin}${esc(x.place)}</span>`].filter(Boolean).join('');
+  return feat.map(x => `<section class="featured" aria-label="Featured"><div class="lbl">${esc([x.long, x.time].filter(Boolean).join(' · '))}</div><h2>${esc(x.title)}</h2>${x.details ? `<p>${esc(x.details)}</p>` : ''}${x.place ? `<p>${esc(x.place)}</p>` : ''}${btn(x) ? `<div>${btn(x)}</div>` : ''}</section>`).join('') +
+    groups.map(g => `<div class="group">${esc(g.title)}</div><div class="list">${g.items.map(x => `<article class="card ann">
+      ${x.day ? `<div class="tile" role="img" aria-label="${esc(x.long)}"><span>${esc(x.mon)}</span><b>${esc(x.day)}</b><span>${esc(x.dow)}</span></div>` : ''}
+      <div style="flex:1;min-width:0"><h3>${esc(x.title)}</h3>${when(x) ? `<div class="meta">${when(x)}</div>` : ''}${x.details ? `<p>${esc(x.details)}</p>` : ''}${btn(x)}</div></article>`).join('')}</div>`).join('');
+}
+
+function render(){
+  const d = DATA, p = d && d.program, news = TAB === 'news';
+  if (d) setColors(d.colors);
+  $('ward').textContent = (d && d.ward) || 'Marblehead Ward';
+  $('title').textContent = news ? 'Announcements' : 'Sacrament Meeting';
+  $('date').textContent = p ? (news ? 'Week of ' + p.date.replace(/^\w+, /, '') : p.date) : '\u00a0';
+  $('pill').hidden = news || !(p && p.label);
+  $('pill').textContent = p && p.label || '';
+  $('tab-program').setAttribute('aria-selected', String(!news));
+  $('tab-news').setAttribute('aria-selected', String(news));
+  $('program').hidden = news; $('news').hidden = !news;
+  if (!d) return;
+  if (news) $('news').innerHTML = renderNews(d.announcements); else $('program').innerHTML = renderProgram(p);
+  document.title = news ? 'Announcements · ' + ((d && d.ward) || '') : 'Program · ' + ((d && d.ward) || '');
+}
+
+function show(tab){
+  TAB = tab;
+  history.replaceState(null, '', tab === 'news' ? '#announcements' : location.pathname + location.search);
+  render();
+  window.scrollTo({top: 0});
+}
+$('tab-program').onclick = () => show('program');
+$('tab-news').onclick = () => show('news');
+$('program').parentNode.querySelector('nav').addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const t = TAB === 'news' ? 'program' : 'news'; show(t); $(t === 'news' ? 'tab-news' : 'tab-program').focus(); }
+});
+
+async function load(){
+  try {
+    const r = await fetch(FEED_URL, {cache: 'no-store'});
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+    DATA = d; store(false, d); $('status').textContent = '';
+    render();
+  } catch (e) {
+    if (!DATA) $('program').innerHTML = '<div class="card empty">The program couldn\'t load. Check your connection and pull down to try again.</div>';
+    else $('status').textContent = 'Showing the last saved copy.';
+  }
+}
+
+DATA = store(true);
+render();
+load();
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') load(); });
+</script>
+</body>
+</html>
