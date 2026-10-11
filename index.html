@@ -141,8 +141,9 @@ function renderProgram(p){
       : `<div class="main">${esc(it.main)}</div>`;
     return `<div class="${cls}"><div class="num">${it.num ? esc(it.num) : ''}</div><div class="body"><div class="lbl">${esc(it.label)}</div>${main}${it.sub ? `<div class="sub">${esc(it.sub)}</div>` : ''}</div></div>`;
   }).join('');
-  return out + `<div class="card order">${rows}</div>
-    <footer><q>Do this in remembrance of me.</q><div>Luke 22:19</div></footer>`;
+  const q = DATA && DATA.quote ? DATA.quote : {text: 'Do this in remembrance of me.', source: 'Luke 22:19'};
+  return out + `<div class="card order">${rows}</div>` +
+    (q.text ? `<footer><q>${esc(q.text.replace(/^["“”]+|["“”]+$/g, ''))}</q>${q.source ? `<div>${esc(q.source)}</div>` : ''}</footer>` : '');
 }
 
 function renderNews(a){
